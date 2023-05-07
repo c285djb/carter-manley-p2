@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="final project read me">
+    <meta name="keywords" content="Carter Manley's Final Project Read Me">
+	<title>Grilling Spree</title>
+    <link rel="stylesheet" type="text/css" href="css/readme.css">
+</head>
+<body>
+    <header>
+        <h1>
+            <img src="images/GrillingSpree.png" alt="Title Text">
+        </h1>
+        <h2>
+            Grill some time and jump a few burgers!
+        </h2>
+    </header>
+    <main>
+        <h3>About This Project</h3>
+        <p>One of my personal goals for JavaScript is to integrate the knowledge I’ve gained in class into my hobby of creating games.
+            I’ve always have worked in C# when doing game design, so I have been eager to accomplish something similar in JavaScript.
+            <br><br>
+            This game will operate similarly to other iterations of the “Jumper” style browser-game. The Jumper-style browser game features 
+            a continuously sideways-scrolling screen populated with randomly generated obstacles. The player controls a sprite that has one 
+            function – to jump. The object of the game is to jump over the obstacles as they scroll past the player. The more obstacles you 
+            jump, the higher your score. Touch an obstacle, and you die!
+            <br><br>
+            Grilling Spree is a simple game – you are the grill. Jump the burgers, or you lose. 
+            <br><br><br>
+        </p>
+            <h3>Features</h3>
+            <p>
+                Game Canvas – a window that arranges and displays all of the game elements.<br>
+                Dynamic player controls – player sprite responds to mouse clicks.<br>
+                Injection of Elements – elements such as player sprites and crates will be dynamically added to the page.<br>
+                Movement – dynamic movement of elements in the scene.<br>
+                Score system - a player’s score will be counted during each playthrough.<br>
+                Player death - the player dies when contacting an object.<br>
+                Score display -  player’s score will be displayed upon “death”.<br>
+                Reset -  the game will allow the player to click to reset the game in order to play again.<br>
+                High score: when the player plays again, the highest score of previous rounds is displayed.<br>
+            </p>
+            <h3>Technical Requirements</h3>
+            
+            <h4>Game Canvas</h4>
+            <p>The game canvas will be defined in CSS and as a special div object in HTML.</p>
+            <h4>Player Movement</h4>
+            <p>In order to get the player to “jump” when a mouse click is input, we define the object’s animation in the CSS file.
+            This is done by using the “.animate” property in CSS to define the jump, then using @keyframes to dictate the object’s 
+            position at a particular moment. The Jump() function in JavaScript just tells us to animate the object using the rules
+            defined in the CSS. It also sets a delay function for the jump, and adds the function back so that it can be called again, 
+            which allows for multiple jumps. An event listener is then added to handle the Jump() function in the JavaScript file so 
+            it can be called when the player presses any button.</p>
+            <h4>Obstacle Movement</h4>
+            <p>The movement of the burgers (obstacles) will be partially defined with @keyframes in the CSS file, but the animation is 
+            simpler, and so the rest can be done in the JavaScript file. They will move constantly until the event that the player 
+            collides with a burger, then their animation will stop, and finally resume when the player plays again.</p>
+            <h4>Score Counting</h4>
+            <p>The score system is actually part of the “CheckDead()” function in JavaScript that uses a conditional statement (if) 
+            to check for the player's death. If the player has not yet died, then the score counter continues to add points.</p>
+            <h4>Player Death/ Game Over</h4>
+            <p>The player death is a function in the JavaScript file that checks for the player’s position relative to the obstacle 
+                in the scene. If the player and the obstacle are occupying the same space, then the player death function is called.</p>
+            <h4>Score Display</h4>
+            <p>The score display is also built into the player’s CheckDead() function in the JavaScript file. We just use a simple alert 
+                function to be called when the CheckDead() condition is triggered.</p>
+            <h4>High Score</h4>
+            <p>While the player has the browser open, each time the player dies, their score will be saved into an array in the JavaScript 
+                file. Each time the player dies, the printScores() function will use a for loop to iterate through the array of scores, and 
+                save the highest one into a variable called highScore.</p>
+            <h4>Reset</h4>
+            <p>Finally, the game is reset in the CheckDead() function by pausing the game to display results, and resetting the player’s
+                 score to zero.</p>
+                 <br><br>
+            <p>Carter Manley IT-DEV 160 - 900</p>
+    </main>
+    <footer>
+        <p>&copy; Copyright 2023 CJMco.</p>
+    </footer>
+</body>
+</html>

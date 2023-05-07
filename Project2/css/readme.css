@@ -1,0 +1,39 @@
+html {
+    font-family: myFont;
+    color:rgb(255, 255, 255);
+}
+
+@font-face {
+    font-family: myFont;
+    src: url(BitBookFont20.ttf)
+}
+*{
+    padding: 0;
+    overflow-x: hidden;
+    background-color: rgb(43, 46, 45);
+}
+
+header img{
+    width: 400px;
+    padding-left: 40%;
+}
+
+h2{
+    padding-left: 38%; 
+    
+}
+h3{
+    font-size: 175%; 
+    padding-left:10%;  
+    color:rgb(255, 38, 208);
+}
+
+main p{
+    margin: 2%;
+    margin right:20%;
+    font-size: 125%; 
+}
+h4{
+    font-size: 125%; 
+    color:rgb(38, 241, 255);
+}

@@ -1,0 +1,82 @@
+html {
+    font-family: myFont;
+    color:rgb(255, 255, 255);
+}
+
+@font-face {
+    font-family: myFont;
+    src: url(BitBookFont20.ttf)
+}
+*{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: rgb(43, 46, 45);
+}
+.game{
+    width: 600px;
+    height: 305px;
+    border: 1px solid rgb(255, 255, 255);
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#character{
+    width: 50px;
+    height: 65px;
+    background-color: rgba(255, 255, 255, 0);
+    position:relative;
+    top: 240px;
+}
+.animate{
+    animation: jump 0.3s linear;
+}
+@keyframes jump{
+    0%{top: 200px;}
+    30%{top: 180px;}
+    70%{top: 180px;}
+    100%{top: 200px;}
+}
+
+#block{
+    background-color: rgba(0, 0, 0, 0);
+    width: 35px;
+    height: 40px;
+    position: relative;
+    top: 200px;
+    left: 500px;
+    animation: block 1s infinite linear;
+}
+@keyframes block{
+    0%{left: 500px}
+    100%{left: -20px}
+}
+p{
+    text-align: center;
+}
+
+header img{
+    width: 400px;
+    padding-left: 40%;
+}
+
+h2{
+    padding-left: 38%; 
+    
+}
+h3{
+    padding-left: 43%;  
+    padding-bottom: 3%;
+}
+
+main p{
+    margin-top: 3%;
+    font-size: 400%; 
+}
+
+.read{
+    padding-top: 1%;
+    padding-left: 45%;
+    font-size: 300%; 
+    color: rgb(255, 255, 255);
+}
